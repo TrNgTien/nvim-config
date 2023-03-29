@@ -162,10 +162,7 @@ vim.cmd [[
 
 ---------------------------------------------------------
 --DevGlow
-vim.cmd('colorscheme devglow')
-vim.g.devglow_blackout = 1
-vim.g.devglow_italic_comments = 1
-
+vim.cmd('colorscheme nightfly')
 vim.cmd [[
   hi! Pmenu guibg=#333333
   sign define DiagnosticSignError text=✖ texthl=DiagnosticSignError linehl= numhl=DiagnosticLineNrError
