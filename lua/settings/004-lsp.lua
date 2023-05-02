@@ -45,7 +45,7 @@ local lspConfig = require('lspconfig')
 local defaultProps = {
   capabilities = capabilities, 
   flags = flags, 
-  handlers = handlers,
+  handlers = handlersl,
 }
 
 lspConfig.dartls.setup(defaultProps)
@@ -53,3 +53,4 @@ lspConfig.tsserver.setup(defaultProps)
 lspConfig.rust_analyzer.setup(defaultProps)
 lspConfig.pyright.setup(defaultProps)
 lspConfig.sqlls.setup(defaultProps)
+lspConfig.gopls.setup(defaultProps)

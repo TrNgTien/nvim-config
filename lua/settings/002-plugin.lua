@@ -23,6 +23,7 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
+Plug 'iamcco/markdown-preview.nvim'
 
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lilydjwg/colorizer'
@@ -31,5 +32,6 @@ Plug 'lilydjwg/colorizer'
 Plug 'phatnt199/devglow'
 Plug 'iibe/gruvbox-high-contrast'
 Plug('kaicataldo/material.vim', { branch = 'main' })
+Plug 'bluz71/vim-nightfly-colors'
 
 vim.call('plug#end')

@@ -42,7 +42,7 @@ require('Comment').setup()
 --Toggle Term
 require('toggleterm').setup({
   size = 20,
-  open_mapping = [[<c-\>]],
+  open_mapping = [[<c-.>]],
   direction = 'horizontal',
 })
 
@@ -51,7 +51,7 @@ require('toggleterm').setup({
 require('nvim-tree').setup({
   disable_netrw = true,
   hijack_netrw = true,
-  open_on_setup = false,
+  -- open_on_setup = false,
   open_on_tab = false,
   update_cwd = true,
   update_focused_file = {
@@ -63,9 +63,22 @@ require('nvim-tree').setup({
     icons = { 
       webdev_colors = true 
     },
+    highlight_opened_files = "none",
+    highlight_modified = "none",
+    indent_markers = {
+      enable = false,
+      inline_arrows = true,
+      icons = {
+        corner = "└",
+        edge = "│",
+        item = "│",
+        bottom = "─",
+        none = " ",
+          },
+      },
   },
-  git = { enable = false, ignore = false, timeout = 400 },
-  view = { cursorline = false },
+  git = { enable = true, ignore = false, timeout = 400 },
+  view = { cursorline = true },
   diagnostics = {
     enable = true,
     show_on_dirs = false,
@@ -123,7 +136,10 @@ vim.cmd [[
   nmap <C-y>                :redo<CR>
   nmap <C-Up>               :resize -2<CR>
   nmap <C-Down>             :resize +2<CR>
-
+  nmap <C-h> <C-w>h
+  nmap <C-j> <C-w>j
+  nmap <C-l> <C-w>l
+  nmap <C-k> <C-w>k
   nmap <leader>ts           :Telescope<CR>
   nmap <C-f>                :Telescope current_buffer_fuzzy_find<CR>
   nmap <C-p>                :Telescope git_files<CR>
@@ -146,17 +162,18 @@ vim.cmd [[
   nmap gd                   :lua vim.lsp.buf.definition()<CR>
   nmap K                    :lua vim.lsp.buf.hover()<CR>
   nmap gi                   :lua vim.lsp.buf.implementation()<CR>
-  nmap <C-k>                :lua vim.lsp.buf.signature_help()<CR>
   nmap <leader>D            :lua vim.lsp.buf.type_definition()<CR>
   nmap <leader>rn           :lua vim.lsp.buf.rename()<CR>
   nmap <leader>ac           :lua vim.lsp.buf.code_action()<CR>
   nmap <leader>oi           :lua vim.lsp.buf.code_action({ context = { only = { 'source.organizeImports' } }, apply = true })<CR>
   nmap gr                   :lua vim.lsp.buf.references()<CR>
-  nmap ff                   :lua vim.lsp.buf.format({ async = true, timeout_ms = 2000 })<CR>
-
+  nmap ff                   :lua vim.lsp.buf.format({ async = true, timeout_ms = 500 })<CR>
   nmap <C-t>                :tabnew<CR>
   nmap <C-x>                :tabclose<CR>
-
+  nnoremap <C-c> "+y
+  vnoremap <C-c> "+y
+  nnoremap <C-p> "+p
+  vnoremap <C-p> "+p
   imap jk                   <Esc>
 ]]
 
@@ -170,3 +187,4 @@ vim.cmd [[
   sign define DiagnosticSignInfo text=! texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
   sign define DiagnosticSignHint text=⚉ texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
 ]]
+
