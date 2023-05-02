@@ -136,10 +136,10 @@ vim.cmd [[
   nmap <C-y>                :redo<CR>
   nmap <C-Up>               :resize -2<CR>
   nmap <C-Down>             :resize +2<CR>
-  nmap <C-h> <C-w>h
-  nmap <C-j> <C-w>j
-  nmap <C-l> <C-w>l
-  nmap <C-k> <C-w>k
+  nmap <C-h>                <C-w>h
+  nmap <C-j>                <C-w>j
+  nmap <C-l>                <C-w>l
+  nmap <C-k>                <C-w>k
   nmap <leader>ts           :Telescope<CR>
   nmap <C-f>                :Telescope current_buffer_fuzzy_find<CR>
   nmap <C-p>                :Telescope git_files<CR>
@@ -149,7 +149,6 @@ vim.cmd [[
   nmap <leader>gc           :Telescope git_commits<CR>
   nmap <leader>gst          :Telescope git_status<CR>
   nmap <leader>gb           :Telescope git_branches<CR>
-
   nmap <C-b>                :NvimTreeToggle<CR>
   nmap <leader>r            :NvimTreeRefresh<CR>
   nmap nf                   :NvimTreeFocus<CR>
@@ -170,10 +169,10 @@ vim.cmd [[
   nmap ff                   :lua vim.lsp.buf.format({ async = true, timeout_ms = 500 })<CR>
   nmap <C-t>                :tabnew<CR>
   nmap <C-x>                :tabclose<CR>
-  nnoremap <C-c> "+y
-  vnoremap <C-c> "+y
-  nnoremap <C-p> "+p
-  vnoremap <C-p> "+p
+  nnoremap <C-c>            "+y
+
+  vnoremap <C-c>            "+y
+
   imap jk                   <Esc>
 ]]
 
