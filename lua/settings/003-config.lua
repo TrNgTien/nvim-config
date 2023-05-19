@@ -77,7 +77,7 @@ require('nvim-tree').setup({
           },
       },
   },
-  git = { enable = true, ignore = false, timeout = 400 },
+  git = { enable = false, ignore = false, timeout = 400 },
   view = { cursorline = true },
   diagnostics = {
     enable = true,
