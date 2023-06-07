@@ -61,7 +61,18 @@ require('nvim-tree').setup({
   },
   renderer = {
     icons = { 
-      webdev_colors = true 
+      webdev_colors = true,
+      git_placement = "before",
+      modified_placement = "after",
+      padding = " ",
+      symlink_arrow = " ➛ ",
+      show = {
+        file = true,
+        folder = true,
+        folder_arrow = true,
+        git = true,
+        modified = true,
+      },
     },
     highlight_opened_files = "none",
     highlight_modified = "none",
@@ -74,8 +85,8 @@ require('nvim-tree').setup({
         item = "│",
         bottom = "─",
         none = " ",
-          },
       },
+    },
   },
   git = { enable = false, ignore = false, timeout = 400 },
   view = { cursorline = true },

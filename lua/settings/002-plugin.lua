@@ -25,6 +25,7 @@ Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
 Plug 'iamcco/markdown-preview.nvim'
 
+Plug 'wakatime/vim-wakatime'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lilydjwg/colorizer'
 
