@@ -145,8 +145,6 @@ vim.cmd [[
   nmap <C-s>                :w<CR>
   nmap <C-z>                :undo<CR>
   nmap <C-y>                :redo<CR>
-  nmap <C-Up>               :resize -2<CR>
-  nmap <C-Down>             :resize +2<CR>
   nmap <C-h>                <C-w>h
   nmap <C-j>                <C-w>j
   nmap <C-l>                <C-w>l
@@ -180,9 +178,14 @@ vim.cmd [[
   nmap ff                   :lua vim.lsp.buf.format({ async = true, timeout_ms = 500 })<CR>
   nmap <C-t>                :tabnew<CR>
   nmap <C-x>                :tabclose<CR>
-  nnoremap <C-c>            "+y
 
+  nnoremap <C-c>            "+y
   vnoremap <C-c>            "+y
+
+  nmap zwj                   :resize -2<CR>
+  nmap zwk                   :resize +2<CR>
+  nmap zwl                   :vertical resize -5<CR>
+  nmap zwh                   :vertical resize +5<CR>
 
   imap jk                   <Esc>
 ]]
