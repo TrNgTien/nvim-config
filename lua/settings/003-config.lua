@@ -60,7 +60,7 @@ require('nvim-tree').setup({
     ignore_list = {},
   },
   renderer = {
-    icons = { 
+    icons = {
       webdev_colors = true,
       git_placement = "before",
       modified_placement = "after",
@@ -107,6 +107,14 @@ require('nvim-tree').setup({
 local function openNvimTree()
   require("nvim-tree.api").tree.open()
 end
+
+-- indention
+vim.opt.list = true
+vim.opt.listchars:append "space:⋅"
+
+require("indent_blankline").setup {
+  space_char_blankline = " ",
+}
 
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = openNvimTree })
 
@@ -179,6 +187,10 @@ vim.cmd [[
   nmap <C-t>                :tabnew<CR>
   nmap <C-x>                :tabclose<CR>
 
+  nmap ge                $
+  nmap gs                0
+  vnoremap ge                $
+  vnoremap gs                0
   nnoremap <C-c>            "+y
   vnoremap <C-c>            "+y
 
@@ -191,7 +203,6 @@ vim.cmd [[
 ]]
 
 ---------------------------------------------------------
---DevGlow
 vim.cmd('colorscheme nightfly')
 vim.cmd [[
   hi! Pmenu guibg=#333333

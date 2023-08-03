@@ -29,6 +29,9 @@ Plug 'wakatime/vim-wakatime'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lilydjwg/colorizer'
 Plug 'f-person/git-blame.nvim'
+
+-- Code indention
+Plug 'lukas-reineke/indent-blankline.nvim'
  
 
 -- Color Scheme

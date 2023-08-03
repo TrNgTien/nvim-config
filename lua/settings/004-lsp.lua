@@ -48,9 +48,15 @@ local defaultProps = {
   handlers = handlersl,
 }
 
+lspConfig.tsserver.setup({
+  root_dir = require('lspconfig.util').root_pattern('.git')
+})
+
 lspConfig.dartls.setup(defaultProps)
-lspConfig.tsserver.setup(defaultProps)
+lspConfig.jsonls.setup(defaultProps)
 lspConfig.rust_analyzer.setup(defaultProps)
 lspConfig.pyright.setup(defaultProps)
 lspConfig.sqlls.setup(defaultProps)
 lspConfig.gopls.setup(defaultProps)
+lspConfig.html.setup(defaultProps)
+lspConfig.cssmodules_ls.setup(defaultProps)
