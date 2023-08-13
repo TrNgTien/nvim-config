@@ -21,11 +21,7 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-Plug 'dart-lang/dart-vim-plugin'
-Plug 'thosakwe/vim-flutter'
-Plug 'iamcco/markdown-preview.nvim'
 
-Plug 'wakatime/vim-wakatime'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lilydjwg/colorizer'
 Plug 'f-person/git-blame.nvim'
@@ -35,11 +31,8 @@ Plug 'lukas-reineke/indent-blankline.nvim'
  
 
 -- Color Scheme
-Plug 'phatnt199/devglow'
 Plug 'iibe/gruvbox-high-contrast'
 Plug('kaicataldo/material.vim', { branch = 'main' })
 Plug 'bluz71/vim-nightfly-colors'
-Plug 'jacoborus/tender.vim'
-Plug 'sainnhe/sonokai'
 
 vim.call('plug#end')
