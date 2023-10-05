@@ -11,7 +11,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'jose-elias-alvarez/null-ls.nvim'
 Plug('nvim-telescope/telescope.nvim', { branch = '0.1.x' })
 Plug 'nvim-telescope/telescope-media-files.nvim'
-Plug('akinsho/toggleterm.nvim', { tag = '*' })
 
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -23,9 +22,9 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'thosakwe/vim-flutter'
-Plug 'iamcco/markdown-preview.nvim'
 
 Plug 'wakatime/vim-wakatime'
+Plug 'iamcco/markdown-preview.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'lilydjwg/colorizer'
 Plug 'f-person/git-blame.nvim'
@@ -35,11 +34,11 @@ Plug 'lukas-reineke/indent-blankline.nvim'
  
 
 -- Color Scheme
-Plug 'phatnt199/devglow'
-Plug 'iibe/gruvbox-high-contrast'
-Plug('kaicataldo/material.vim', { branch = 'main' })
 Plug 'bluz71/vim-nightfly-colors'
-Plug 'jacoborus/tender.vim'
-Plug 'sainnhe/sonokai'
 
+-- spell-check
+Plug 'kamykn/spelunker.vim'
+
+-- formartter
+Plug 'mhartington/formatter.nvim'
 vim.call('plug#end')

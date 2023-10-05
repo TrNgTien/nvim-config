@@ -39,14 +39,6 @@ require('lualine').setup({
 require('Comment').setup()
 
 ---------------------------------------------------------
---Toggle Term
-require('toggleterm').setup({
-  size = 20,
-  open_mapping = [[<c-.>]],
-  direction = 'horizontal',
-})
-
----------------------------------------------------------
 --NvimTree
 require('nvim-tree').setup({
   disable_netrw = true,
@@ -147,10 +139,66 @@ telescope.setup {
   }
 }
 
+--formatter
+-- Utilities for creating configurations
+-- local util = require "formatter.util"
+--
+-- -- Provides the Format, FormatWrite, FormatLock, and FormatWriteLock commands
+-- require("formatter").setup {
+--   -- Enable or disable logging
+--   logging = true,
+--   -- Set the log level
+--   log_level = vim.log.levels.WARN,
+--   -- All formatter configurations are opt-in
+--   filetype = {
+--     -- Formatter configurations for filetype "lua" go here
+--     -- and will be executed in order
+--     lua = {
+--       -- "formatter.filetypes.lua" defines default configurations for the
+--       -- "lua" filetype
+--       require("formatter.filetypes.lua").stylua,
+--
+--       -- You can also define your own configuration
+--       function()
+--         -- Supports conditional formatting
+--         if util.get_current_buffer_file_name() == "special.lua" then
+--           return nil
+--         end
+--
+--         -- Full specification of configurations is down below and in Vim help
+--         -- files
+--         return {
+--           exe = "stylua",
+--           args = {
+--             "--search-parent-directories",
+--             "--stdin-filepath",
+--             util.escape_path(util.get_current_buffer_file_path()),
+--             "--",
+--             "-",
+--           },
+--           stdin = true,
+--         }
+--       end
+--     },
+--
+--     -- Use the special "*" filetype for defining formatter configurations on
+--     -- any filetype
+--     ["*"] = {
+--       -- "formatter.filetypes.any" defines default configurations for any
+--       -- filetype
+--       require("formatter.filetypes.any").remove_trailing_whitespace
+--     }
+--   }
+-- }
+require('gitblame').setup {
+    delay = 500
+}
+
 ---------------------------------------------------------
 --Keymaps
 vim.cmd [[
   nmap <C-s>                :w<CR>
+  nmap <C-q>                :qa<CR>
   nmap <C-z>                :undo<CR>
   nmap <C-y>                :redo<CR>
   nmap <C-h>                <C-w>h
@@ -184,24 +232,21 @@ vim.cmd [[
   nmap <leader>oi           :lua vim.lsp.buf.code_action({ context = { only = { 'source.organizeImports' } }, apply = true })<CR>
   nmap gr                   :lua vim.lsp.buf.references()<CR>
   nmap ff                   :lua vim.lsp.buf.format({ async = true, timeout_ms = 500 })<CR>
-  nmap <C-t>                :tabnew<CR>
-  nmap <C-x>                :tabclose<CR>
 
-  nmap ge                $
-  nmap gs                0
-  vnoremap ge                $
-  vnoremap gs                0
-  nnoremap <C-c>            "+y
+  vnoremap J                :m '>+1<CR>gv=gv
+  vnoremap K                :m '<-2<CR>gv=gv
+  nmap ge                   $
+  nmap gs                   0
+  vnoremap ge               $
+  vnoremap gs               0
   vnoremap <C-c>            "+y
-
-  nmap zwj                   :resize -2<CR>
-  nmap zwk                   :resize +2<CR>
-  nmap zwl                   :vertical resize -5<CR>
-  nmap zwh                   :vertical resize +5<CR>
+  nmap zwj                  :resize -2<CR>
+  nmap zwk                  :resize +2<CR>
+  nmap zwl                  :vertical resize -5<CR>
+  nmap zwh                  :vertical resize +5<CR>
 
   imap jk                   <Esc>
 ]]
-
 ---------------------------------------------------------
 vim.cmd('colorscheme nightfly')
 vim.cmd [[
@@ -211,4 +256,3 @@ vim.cmd [[
   sign define DiagnosticSignInfo text=! texthl=DiagnosticSignInfo linehl= numhl=DiagnosticLineNrInfo
   sign define DiagnosticSignHint text=⚉ texthl=DiagnosticSignHint linehl= numhl=DiagnosticLineNrHint
 ]]
-
