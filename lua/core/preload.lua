@@ -37,5 +37,4 @@ set.secure = true
 
 set.termguicolors = true
 set.background = 'dark'
--- set.completeopt = { 'menu' , 'menuone' , 'noselect' }
--- set.shortmess = set.shortmess + 'c'
+

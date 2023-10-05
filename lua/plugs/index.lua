@@ -1,0 +1,7 @@
+require('plugs.formatter')
+require('plugs.indention')
+require('plugs.common-plugs')
+require('plugs.lualine')
+require('plugs.UI.dashboard')
+require('plugs.nv-tree')
+require('plugs.telescope')
