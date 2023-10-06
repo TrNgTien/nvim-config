@@ -37,6 +37,7 @@ indention.setup {
   scope = scope,
   exclude = { filetypes = { "dashboard" } },
   indent = { 
+    char = "|",
     highlight = highlight,
     smart_indent_cap = true,
   },
