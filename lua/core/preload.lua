@@ -1,4 +1,5 @@
 local set = vim.opt
+local g = vim.g
 
 set.expandtab = true
 set.smarttab = true
@@ -20,7 +21,6 @@ set.smartcase = true
 set.splitbelow = true
 set.splitright = true
 set.wrap = false
-set.scrolloff = 5
 set.fileencoding = 'utf-8'
 set.encoding = 'utf-8'
 
@@ -35,6 +35,13 @@ set.number = true
 set.hidden = true
 set.secure = true
 
+set.scrolloff = 8
+set.signcolumn = 'yes'
 set.termguicolors = true
 set.background = 'dark'
+set.fillchars = 'vert:│'
 
+local diabled_providers = { 'python3', 'node', 'perl', 'ruby' }
+for index in ipairs(diabled_providers) do
+  g[string.format("loaded_%s_provider", diabled_providers[index])] = 0
+end

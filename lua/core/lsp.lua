@@ -1,14 +1,4 @@
 local cmp = require('cmp')
-local lspConfig = require('lspconfig')
-local cmpLsp = require('cmp_nvim_lsp')
-
-local capabilities = cmpLsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
-local flags = { debounce_text_changes = 150 }
-local defaultProps = {
-  capabilities = capabilities, 
-  flags = flags, 
-  handlers = handlersl,
-}
 
 cmp.setup({
   snippet = {
@@ -36,6 +26,9 @@ cmp.setup({
   })
 })
 
+local cmpLsp = require('cmp_nvim_lsp')
+local capabilities = cmpLsp.default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local flags = { debounce_text_changes = 150 }
 
 local handlers = {
   ["textDocument/publishDiagnostics"] = vim.lsp.with(
@@ -47,10 +40,19 @@ local handlers = {
   ),
 }
 
+local lspConfig = require('lspconfig')
 
+local defaultProps = {
+  capabilities = capabilities, 
+  flags = flags, 
+  handlers = handlersl,
+}
+
+lspConfig.tsserver.setup({
+  root_dir = require('lspconfig.util').root_pattern('.git')
+})
 
 lspConfig.dartls.setup(defaultProps)
-lspConfig.jsonls.setup(defaultProps)
 lspConfig.rust_analyzer.setup(defaultProps)
 lspConfig.pyright.setup(defaultProps)
 lspConfig.sqlls.setup(defaultProps)
