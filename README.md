@@ -33,5 +33,5 @@ https://github.com/phatnt199/neovim-configuration
 
 ### Demo:
 
-<img src="../demo_dashboard.png" alt="demo dashboard">
-<img src="../detail.png" alt="detail">
+<img src="./demo_dashboard.png" alt="demo dashboard">
+<img src="./detail.png" alt="detail">
