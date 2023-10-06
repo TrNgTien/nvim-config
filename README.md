@@ -29,3 +29,9 @@ https://github.com/phatnt199/neovim-configuration
 - Restart ```nvim``` and...
 
 - Enjoy
+
+
+### Demo:
+
+<img src="../demo_dashboard.png" alt="demo dashboard">
+<img src="../detail.png" alt="detail">
