@@ -1,2 +1,1 @@
-require('core.index')
-require('plugs.index')
+require('index')
