@@ -43,4 +43,6 @@ Plug 'kamykn/spelunker.vim'
 
 Plug 'nvimdev/dashboard-nvim'
 
+Plug 'windwp/nvim-autopairs'
+
 vim.call('plug#end')

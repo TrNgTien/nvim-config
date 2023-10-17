@@ -43,14 +43,16 @@ local handlers = {
 local lspConfig = require('lspconfig')
 
 local defaultProps = {
-  capabilities = capabilities, 
-  flags = flags, 
+  capabilities = capabilities,
+  flags = flags,
   handlers = handlersl,
 }
 
 lspConfig.tsserver.setup({
   root_dir = require('lspconfig.util').root_pattern('.git')
 })
+
+lspConfig.eslint.setup{}
 
 lspConfig.dartls.setup(defaultProps)
 lspConfig.rust_analyzer.setup(defaultProps)
