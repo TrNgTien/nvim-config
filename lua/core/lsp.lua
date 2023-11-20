@@ -52,7 +52,9 @@ lspConfig.tsserver.setup({
   root_dir = require('lspconfig.util').root_pattern('.git')
 })
 
+
 lspConfig.eslint.setup{}
+lspConfig.graphql.setup{}
 
 lspConfig.dartls.setup(defaultProps)
 lspConfig.rust_analyzer.setup(defaultProps)

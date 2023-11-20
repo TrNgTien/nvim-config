@@ -34,7 +34,9 @@ Plug 'f-person/git-blame.nvim'
 
 Plug 'lukas-reineke/indent-blankline.nvim'
 
+-- colorscheme
 Plug 'bluz71/vim-nightfly-colors'
+Plug 'catppuccin/nvim'
 
 Plug 'mhartington/formatter.nvim'
 

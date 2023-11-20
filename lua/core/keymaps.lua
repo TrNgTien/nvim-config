@@ -52,10 +52,10 @@ vim.cmd [[
 ]]
 
 vim.cmd [[
-  colorscheme nightfly
+  colorscheme catppuccin-mocha
 
   hi! Pmenu guibg=#333333
-  hi! VertSplit guibg=#131213 guifg=#333333
+  hi! VertSplit guibg=#031727 guifg=#61AFEF
 
   sign define DiagnosticSignError text=✖ texthl=DiagnosticSignError linehl= numhl=DiagnosticLineNrError
   sign define DiagnosticSignWarn text=◼ texthl=DiagnosticSignWarn linehl= numhl=DiagnosticLineNrWarn
