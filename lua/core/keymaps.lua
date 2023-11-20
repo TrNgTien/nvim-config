@@ -52,7 +52,7 @@ vim.cmd [[
 ]]
 
 vim.cmd [[
-  colorscheme catppuccin-mocha
+  colorscheme onedark
 
   hi! Pmenu guibg=#333333
   hi! VertSplit guibg=#031727 guifg=#61AFEF

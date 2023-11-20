@@ -36,7 +36,7 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 
 -- colorscheme
 Plug 'bluz71/vim-nightfly-colors'
-Plug 'catppuccin/nvim'
+Plug 'navarasu/onedark.nvim'
 
 Plug 'mhartington/formatter.nvim'
 
