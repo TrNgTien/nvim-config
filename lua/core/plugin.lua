@@ -24,8 +24,6 @@ Plug 'hrsh7th/vim-vsnip'
 
 Plug 'wakatime/vim-wakatime'
 
-Plug 'iamcco/markdown-preview.nvim'
-
 Plug 'nvim-lualine/lualine.nvim'
 
 Plug 'lilydjwg/colorizer'
@@ -45,6 +43,8 @@ Plug 'kamykn/spelunker.vim'
 
 Plug 'nvimdev/dashboard-nvim'
 
-Plug 'windwp/nvim-autopairs'
+-- Plug 'windwp/nvim-autopairs'
+
+Plug 'iamcco/markdown-preview.nvim'
 
 vim.call('plug#end')

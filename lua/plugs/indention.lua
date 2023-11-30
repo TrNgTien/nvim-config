@@ -6,9 +6,6 @@ local highlight = {
   "RainbowGreen",
   "RainbowCyan",
   "RainbowGreenDark",
-  -- "RainbowYellow",
-  -- "RainbowRed",
-  -- "RainbowViolet",
 }
 
 local whitespace = {
@@ -26,10 +23,7 @@ hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
   vim.api.nvim_set_hl(0, "RainbowGreen", { fg = "#98C379" })
   vim.api.nvim_set_hl(0, "RainbowGreenDark", { fg = "#4a8885" })
   vim.api.nvim_set_hl(0, "RainbowCyan", { fg = "#56B6C2" })
-  vim.api.nvim_set_hl(0, "RainbowRed", { fg = "#E05C79" })
-  vim.api.nvim_set_hl(0, "RainbowYellow", { fg = "#a69980" })
   vim.api.nvim_set_hl(0, "RainbowOrange", { fg = "#D19A66" })
-  vim.api.nvim_set_hl(0, "RainbowViolet", { fg = "#C678DD" })
 end)
 
 hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
