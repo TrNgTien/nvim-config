@@ -39,11 +39,11 @@ Plug 'navarasu/onedark.nvim'
 Plug 'mhartington/formatter.nvim'
 
 -- spell-check
-Plug 'kamykn/spelunker.vim'
+-- Plug 'kamykn/spelunker.vim'
 
-Plug 'nvimdev/dashboard-nvim'
+-- Plug 'nvimdev/dashboard-nvim'
 
--- Plug 'windwp/nvim-autopairs'
+Plug 'windwp/nvim-autopairs'
 
 Plug 'iamcco/markdown-preview.nvim'
 

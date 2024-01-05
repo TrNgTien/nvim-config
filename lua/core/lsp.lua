@@ -60,4 +60,14 @@ lspConfig.dartls.setup(defaultProps)
 lspConfig.rust_analyzer.setup(defaultProps)
 lspConfig.pyright.setup(defaultProps)
 lspConfig.sqlls.setup(defaultProps)
-lspConfig.gopls.setup(defaultProps)
+lspConfig.gopls.setup({
+  settings = {
+    gopls = {
+      analyses = {
+        unusedparams = true,
+      },
+      staticcheck = true,
+      gofumpt = true,
+    },
+  },
+})

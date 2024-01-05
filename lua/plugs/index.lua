@@ -1,5 +1,5 @@
 require('plugs.formatter')
-require('plugs.indention')
+require('plugs.auto-pairs')
 require('plugs.common-plugs')
 require('plugs.lualine')
 require('plugs.nv-tree')
