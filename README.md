@@ -30,8 +30,3 @@ https://github.com/phatnt199/neovim-configuration
 
 - Enjoy
 
-
-### Demo:
-
-<img src="./demo_dashboard.png" alt="demo dashboard">
-<img src="./detail.png" alt="detail">
