@@ -11,6 +11,10 @@ vim.cmd [[
   nmap <C-p>                :Telescope git_files<CR>
   nmap <C-r>                :Telescope find_files<CR>
   nmap <C-b>                :NvimTreeToggle<CR>
+
+  nmap <leader>cl           :NvimTreeCollapse<CR>
+  vnoremap <leader>cl       :NvimTreeCollapse<CR>
+
   nmap <M-j>                <C-e>
   nmap <M-k>                <C-y>
   vnoremap <C-c>            "+y
@@ -44,10 +48,6 @@ vim.cmd [[
   nmap gs                   0
   vnoremap ge               $
   vnoremap gs               0
-  nmap zwj                  :resize -2<CR>
-  nmap zwk                  :resize +2<CR>
-  nmap zwl                  :vertical resize -5<CR>
-  nmap zwh                  :vertical resize +5<CR>
   imap jk                   <Esc>
 ]]
 
