@@ -15,10 +15,10 @@ vim.cmd [[
   nmap <leader>cl           :NvimTreeCollapse<CR>
   vnoremap <leader>cl       :NvimTreeCollapse<CR>
 
+  nmap <leader>ld           :Telescope lsp_document_symbols<CR>
   nmap <M-j>                <C-e>
   nmap <M-k>                <C-y>
   vnoremap <C-c>            "+y
-  nmap <leader>md           :MarkdownPreview<CR>
   nmap <leader>ts           :Telescope<CR>
   nmap <leader>ff           :Telescope live_grep<CR>
   nmap <leader>fs           :Telescope grep_string<CR>
@@ -49,6 +49,7 @@ vim.cmd [[
   vnoremap ge               $
   vnoremap gs               0
   imap jk                   <Esc>
+
 ]]
 
 vim.cmd [[
