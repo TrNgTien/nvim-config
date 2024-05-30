@@ -33,7 +33,6 @@ Plug 'f-person/git-blame.nvim'
 Plug 'lukas-reineke/indent-blankline.nvim'
 
 -- colorscheme
-Plug 'bluz71/vim-nightfly-colors'
 Plug 'navarasu/onedark.nvim'
 
 Plug 'mhartington/formatter.nvim'
@@ -41,10 +40,14 @@ Plug 'mhartington/formatter.nvim'
 -- spell-check
 -- Plug 'kamykn/spelunker.vim'
 
--- Plug 'nvimdev/dashboard-nvim'
-
 Plug 'windwp/nvim-autopairs'
 
-Plug 'iamcco/markdown-preview.nvim'
+Plug 'themaxmarchuk/tailwindcss-colors.nvim'
+
+-- Golang
+Plug 'darrikonn/vim-gofmt'
+
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+
 
 vim.call('plug#end')

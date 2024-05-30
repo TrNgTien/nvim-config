@@ -19,6 +19,14 @@ vim.cmd [[
   nmap <M-j>                <C-e>
   nmap <M-k>                <C-y>
   vnoremap <C-c>            "+y
+
+  nmap <leader>ip           :Mason<CR>
+
+  nmap <leader>gf           :GoFmt<CR>
+  nmap <leader>goi          :GoImports<CR>
+  nmap <leader>gi           :GoInstallBinaries<CR>
+  nmap <leader>gu           :GoUpdateBinaries<CR>
+
   nmap <leader>ts           :Telescope<CR>
   nmap <leader>ff           :Telescope live_grep<CR>
   nmap <leader>fs           :Telescope grep_string<CR>

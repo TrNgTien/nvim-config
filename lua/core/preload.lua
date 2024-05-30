@@ -21,11 +21,11 @@ set.smartcase = true
 set.splitbelow = true
 set.splitright = true
 set.wrap = false
-set.fileencoding = 'utf-8'
-set.encoding = 'utf-8'
+set.fileencoding = "utf-8"
+set.encoding = "utf-8"
 
 set.cursorline = true
-set.cursorlineopt = 'number'
+set.cursorlineopt = "number"
 set.backup = false
 set.writebackup = false
 set.lazyredraw = true
@@ -36,12 +36,14 @@ set.hidden = true
 set.secure = true
 
 set.scrolloff = 8
-set.signcolumn = 'yes'
+set.signcolumn = "yes"
 set.termguicolors = true
-set.background = 'dark'
-set.fillchars = 'vert:│'
+set.background = "dark"
+set.fillchars = "vert:│"
 
-local diabled_providers = { 'python3', 'node', 'perl', 'ruby' }
+g.skip_ts_context_commentstring_module = true
+
+local diabled_providers = { "python3", "node", "perl", "ruby" }
 for index in ipairs(diabled_providers) do
-  g[string.format("loaded_%s_provider", diabled_providers[index])] = 0
+	g[string.format("loaded_%s_provider", diabled_providers[index])] = 0
 end
