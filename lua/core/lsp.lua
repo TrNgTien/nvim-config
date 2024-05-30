@@ -51,7 +51,7 @@ lspConfig.tsserver.setup({
 })
 
 -- lspConfig.graphql.setup{}
--- lspConfig.eslint.setup({})
+lspConfig.eslint.setup({})
 
 lspConfig.tailwindcss.setup({})
 
