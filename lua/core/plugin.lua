@@ -22,7 +22,6 @@ Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/vim-vsnip'
 
-Plug 'wakatime/vim-wakatime'
 
 Plug 'nvim-lualine/lualine.nvim'
 
@@ -48,6 +47,9 @@ Plug 'themaxmarchuk/tailwindcss-colors.nvim'
 Plug 'darrikonn/vim-gofmt'
 
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
+
+-- copilot
+Plug 'github/copilot.vim'
 
 
 vim.call('plug#end')
